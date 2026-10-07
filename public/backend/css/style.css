@@ -1,0 +1,402 @@
+.help-block,
+.image-custom-required,
+.input-error {
+    color: red;
+}
+
+.disabled-item {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.badge-count {
+    color: white !important;
+    background-color: #FF5F1F !important;
+}
+
+.selected-product {
+    background-color: #fce5f3 !important;
+    /* Light pink background for selected products */
+}
+
+
+.field-requireds {
+    border: 1px solid red;
+}
+
+.card.card-flush>.card-header {
+    border-bottom: 1px solid #cecbcb !important;
+}
+
+#kt_app_sidebar .menu-sub .menu-item:hover {
+    border-radius: 0.475rem;
+    margin-right: 1rem;
+}
+
+/* ===============================
+   NORMAL HEADER STYLE
+================================= */
+.classTable table.dataTable thead th {
+    background-color: #39AF74 !important;
+    color: #ffffff !important;
+    border-bottom: none !important;
+}
+
+/* ===============================
+   FIXED HEADER (CLONED HEADER)
+   This is the IMPORTANT PART
+================================= */
+table.dataTable.fixedHeader-floating {
+    background-color: #39AF74 !important;
+}
+
+table.dataTable.fixedHeader-floating thead th {
+    background-color: #39AF74 !important;
+    color: #ffffff !important;
+    border-bottom: none !important;
+}
+
+/* Remove unwanted white line or shadow */
+.fixedHeader-floating {
+    box-shadow: none !important;
+    border-bottom: none !important;
+    z-index: 1050 !important;
+}
+
+/* ========================================================
+   STICKY TABLE HEADER ON MOBILE & TABLET SCREENS
+======================================================== */
+@media screen and (max-width: 991.98px) {
+    /* 1. Hide DataTables JS Cloned/Floating Header */
+    table.dataTable.fixedHeader-floating,
+    table.dataTable.fixedHeader-locked,
+    .fixedHeader-floating,
+    .fixedHeader-locked {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        height: 0 !important;
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* 2. Overrule container overflow so CSS sticky can stick to viewport */
+    .table-responsive,
+    .classTable,
+    .dataTables_wrapper,
+    .card,
+    .card-body {
+        overflow: visible !important;
+    }
+
+    /* 3. Separate border collapse so sticky TH works reliably across all browsers */
+    .classTable table.dataTable,
+    table.dataTable {
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+    }
+
+    /* 4. Pure CSS Sticky Table Header for Mobile (Sticks directly at top 0) */
+    .classTable table.dataTable thead,
+    table.dataTable thead {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 99 !important;
+    }
+
+    .classTable table.dataTable thead th,
+    table.dataTable thead th {
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 99 !important;
+        background-color: #39AF74 !important;
+        color: #ffffff !important;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+
+
+/* ===============================
+   ROW STYLING
+================================= */
+
+/* Zebra striping */
+.classTable table.dataTable tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Padding fixes */
+.classTable table.dataTable tbody td:first-child,
+.classTable table.dataTable thead th:first-child {
+    padding-left: 0.75rem !important;
+}
+
+.classTable table.dataTable tbody td:last-child,
+.classTable table.dataTable thead th:last-child {
+    padding-right: 0.75rem !important;
+}
+
+/* ===============================
+   IMPORTANT: DO NOT BREAK DT
+================================= */
+
+/* REMOVE these if you previously added them */
+.dataTables_scrollBody {
+    overflow: unset !important;
+}
+
+.dataTables_scrollHead {
+    overflow: visible !important;
+}
+
+.dataTables_scrollHeadInner {
+    width: 100% !important;
+}
+
+.classTable .row {
+    margin: 10px 0;
+}
+
+.dataTables_wrapper {
+    width: 100% !important;
+}
+
+a.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+a.dropdown-item:hover {
+    border-radius: 5px;
+    background-color: #E9F3FF;
+}
+
+.iti__flag-container {
+    height: 46px;
+}
+
+span#toggle-password {
+    top: 20px !important;
+}
+
+.dropzone {
+    border: 1px dashed #dbdfe9 !important;
+}
+
+
+.container-news {
+    position: relative;
+}
+
+.container-news,
+.container-news .headertext {
+    padding: 7px;
+    background-color: #fff;
+
+    font-weight: bold;
+}
+
+.container-news .headertext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #f8285a;
+}
+
+.container-news marquee {
+    top: 5px;
+    position: relative;
+}
+
+.notification-btn-count {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+}
+
+/*optgroup- option group */
+.select2-results__group {
+    font-weight: bold !important;
+}
+
+.field-requireds {
+    border: 1px solid red;
+}
+
+
+/* notification */
+.notification-btn-count {
+    position: relative;
+}
+
+.notification-unread {
+    background-color: #f3f1f1;
+}
+
+.notification-count {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+}
+
+/* Hide toggle icon by default (when no columns hidden) */
+table.dataTable.dtr-inline>tbody>tr>td.dtr-control:before,
+table.dataTable.dtr-inline>tbody>tr>th.dtr-control:before {
+    content: '' !important;
+    width: 0;
+    margin: 0;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+    margin-top: 7px !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+
+/* Porject timeline star css  */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    display: none;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rated:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+.star-rating-complete {
+    color: #c59b08;
+}
+
+.rating-container .form-control:hover,
+.rating-container .form-control:focus {
+    background: #fff;
+    border: 1px solid #ced4da;
+}
+
+.rating-container textarea:focus,
+.rating-container input:focus {
+    color: #000;
+}
+
+.rated {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rated:not(:checked)>input {
+    position: absolute;
+    display: none;
+}
+
+.rated:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ffc700;
+}
+
+.rated:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rated>input:checked~label {
+    color: #ffc700;
+}
+
+.rated:not(:checked)>label:hover,
+.rated:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rated>input:checked+label:hover,
+.rated>input:checked+label:hover~label,
+.rated>input:checked~label:hover,
+.rated>input:checked~label:hover~label,
+.rated>label:hover~input:checked~label {
+    color: #c59b08;
+}
