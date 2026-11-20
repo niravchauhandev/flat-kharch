@@ -400,3 +400,105 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
 .rated>label:hover~input:checked~label {
     color: #c59b08;
 }
+
+/* ========================================================
+   PROJECT STANDARDS: Status Chips, Buttons & Form Validation
+======================================================== */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.chip::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+.chip.ok {
+    background: rgba(16, 185, 129, 0.15) !important;
+    color: #10B981 !important;
+}
+.chip.ok::before {
+    background: #10B981 !important;
+}
+.chip.dmg {
+    background: rgba(244, 63, 94, 0.15) !important;
+    color: #F43F5E !important;
+}
+.chip.dmg::before {
+    background: #F43F5E !important;
+}
+.chip.warn {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #F59E0B !important;
+}
+.chip.warn::before {
+    background: #F59E0B !important;
+}
+
+/* Standard Buttons */
+.btn.pri,
+.btn-primary.btn.pri {
+    background: linear-gradient(135deg, #10B981, #06B6D4) !important;
+    color: #090506 !important;
+    font-weight: 600 !important;
+    border: none !important;
+}
+.btn.pri:hover {
+    filter: brightness(1.1) !important;
+}
+.btn.out {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    color: #F8FAFC !important;
+}
+.btn.out:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+.btn.danger {
+    background: #F43F5E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+}
+.btn.danger:hover {
+    filter: brightness(1.1) !important;
+}
+
+/* Standard Error Text Below Inputs */
+.help-block,
+.image-custom-required,
+.input-error,
+span.help-block,
+label.help-block,
+span.error,
+label.error,
+.help-block-error,
+.ferr {
+    color: red !important;
+    font-size: 12.5px;
+    font-weight: 500;
+    margin-top: 4px;
+    display: block;
+    line-height: 1.4;
+}
+
+input.error,
+select.error,
+textarea.error {
+    border-color: red !important;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15) !important;
+}
+
+/* Toolbar right-aligned searchbox */
+.toolbar-search-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}

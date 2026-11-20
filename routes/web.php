@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\authentication\LoginController;
 use App\Http\Controllers\backend\dashboard\DashboardController;
+use App\Http\Controllers\backend\monthly_pool\MonthlyPoolController;
 use App\Http\Controllers\backend\user\UserController;
 
 /*
@@ -37,6 +38,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user-update/{id}', [UserController::class, 'update'])->name('user-update')->middleware('permission:user edit');
     Route::post('/user-delete/{id}', [UserController::class, 'destroy'])->name('user-delete')->middleware('permission:user delete');
     Route::post('/user-change-status', [UserController::class, 'changeStatus'])->name('user-change-status')->middleware('permission:user status');
+
+    // Monthly Pool & Advance Fund
+    Route::get('/monthly-pool', [MonthlyPoolController::class, 'index'])->name('monthly-pool')->middleware('permission:monthly-pool list');
+    Route::post('/add-save-monthly-pool', [MonthlyPoolController::class, 'store'])->name('add-save-monthly-pool')->middleware('permission:monthly-pool add');
+    Route::post('/edit-save-monthly-pool', [MonthlyPoolController::class, 'update'])->name('edit-save-monthly-pool')->middleware('permission:monthly-pool edit');
+    Route::post('/monthly-pool-ajaxcall', [MonthlyPoolController::class, 'ajaxcall'])->name('monthly-pool-ajaxcall');
 });
 
 /*

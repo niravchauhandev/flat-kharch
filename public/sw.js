@@ -4,16 +4,19 @@ const STATIC_ASSETS = [
   '/',
   '/spa',
   '/manifest.json',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/icons/icon-192x192.svg',
-  '/icons/icon-512x512.svg'
+  '/pwa-icons/icon-192x192.png',
+  '/pwa-icons/icon-512x512.png',
+  '/pwa-icons/icon-192x192.svg',
+  '/pwa-icons/icon-512x512.svg'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(STATIC_ASSETS);
+      // Use map to safely cache available assets without failing if one asset has an issue
+      return Promise.allSettled(
+        STATIC_ASSETS.map((asset) => cache.add(asset).catch((err) => console.warn('Cache failed for:', asset, err))
+      );
     })
   );
   self.skipWaiting();

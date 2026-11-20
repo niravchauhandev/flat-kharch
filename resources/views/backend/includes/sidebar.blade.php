@@ -77,9 +77,10 @@
                     <!--end:Heading-->
 
                     <!--begin:Monthly Pool-->
+                    @can('monthly-pool list')
                     <div class="menu-item">
                         <a class="menu-link {{ str_contains($currentRoute ?? '', 'monthly-pool') ? 'active' : '' }}" 
-                           href="{{ Route::has('monthly-pool.index') ? route('monthly-pool.index') : 'javascript:;' }}">
+                           href="{{ Route::has('monthly-pool') ? route('monthly-pool') : 'javascript:;' }}">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-wallet fs-2">
                                     <span class="path1"></span>
@@ -91,6 +92,7 @@
                             <span class="menu-title">Monthly Pool</span>
                         </a>
                     </div>
+                    @endcan
                     <!--end:Monthly Pool-->
 
                     <!--begin:Cash Advances-->

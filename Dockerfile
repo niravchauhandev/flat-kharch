@@ -25,8 +25,9 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Enable Apache rewrite module
-RUN a2enmod rewrite
+# Enable Apache rewrite module and disable default /icons/ alias conflict
+RUN a2enmod rewrite \
+    && sed -i 's|Alias /icons/|#Alias /icons/|g' /etc/apache2/mods-available/alias.conf
 
 # Configure Apache DocumentRoot to Laravel's public directory
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public

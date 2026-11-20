@@ -12,8 +12,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Flat-Kharch">
-    <link rel="icon" type="image/svg+xml" href="/icons/icon-192x192.svg">
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/svg+xml" href="/pwa-icons/icon-192x192.svg">
+    <link rel="apple-touch-icon" href="/pwa-icons/icon-192x192.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

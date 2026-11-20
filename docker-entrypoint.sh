@@ -11,6 +11,9 @@ if [ -n "$DB_HOST" ]; then
     php artisan migrate --force || echo "Migration skipped or database not reachable yet"
 fi
 
+# Create storage symlink if not present
+php artisan storage:link || true
+
 # Optimize Laravel cache
 php artisan config:cache || true
 php artisan route:cache || true
