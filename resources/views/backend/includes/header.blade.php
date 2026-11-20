@@ -11,6 +11,7 @@
     <!-- Metronic 8 Global Stylesheets Bundle -->
     <link href="{{ asset('backend/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('backend/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/css/style.css') }}?v={{ file_exists(public_path('backend/css/style.css')) ? filemtime(public_path('backend/css/style.css')) : time() }}" rel="stylesheet" type="text/css" />
 
     <!-- FontAwesome CDN / Local Bundle -->
     @if(file_exists(public_path('backend/plugins/global/fonts/fontawesome/font_cdn.css')))
